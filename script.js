@@ -36,3 +36,34 @@ function editarValores(numero,pos1,pos2){
 (function example(numero,pos1,pos2){
   editarValores(numero,pos1,pos2);
 })(numero,2,5);
+
+function agregarCondimento(comida){
+  return function(condimento){
+    return 'Se le agrego' + condimento + 'a su' + comida
+  }
+}
+
+function retornar(valor){
+  function mostrarValor(valor){
+    console.log(valor);
+  }
+}
+
+function funcion(palabra){
+  palabra.mayusculas = function(){
+    palabra.toUpperCase();
+    console.log(palabra);
+  };
+}
+
+var arreglo = [];
+function invertir(arreglo){
+  return function(){
+    var result = [],
+       ii = arreglo.length;
+   for (var i = ii - 1;i !== 0;i--) {
+       result.push(arreglo[i]);
+   }
+   return result;
+  };
+}
